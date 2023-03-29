@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 const PokemonCard = ({pokemon}) => {
   return (
     <figure>
-      {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} class="card-img" />  : <p>???</p>}
       <figcaption>
         {pokemon.name}
       </figcaption>
+      {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} className="pokemonCardImg" />  : <p>???</p>}
     </figure>
   )
 }
