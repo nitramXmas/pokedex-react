@@ -35,6 +35,8 @@
 
 .card {
   padding: 2em;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .read-the-docs {
