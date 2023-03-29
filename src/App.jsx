@@ -15,9 +15,9 @@ function App() {
 
   return (
     <div className="card">
-      {pokemonIndex > 0 ? <button onClick={handleClickPrev}>Previous Pokemon</button> : ""}
+      {pokemonIndex > 0 ? <button onClick={handleClickPrev}>Previous Pokemon</button> : <button>Previous Pokemon</button> }
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      {pokemonIndex < pokemonList.length -1 ? <button onClick={handleClickNext}>Next Pokemon</button> : ""}
+      {pokemonIndex < pokemonList.length -1 ? <button onClick={handleClickNext}>Next Pokemon</button> : <button>Next Pokemon</button> }
     </div>    
   );
 }
@@ -47,5 +47,7 @@ const pokemonList = [
       name: "mew",
     },
   ];
+
+  
 
 export default App
