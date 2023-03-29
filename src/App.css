@@ -42,37 +42,33 @@
 }
 
 .pokemonCard{
-  height: 40em;
   width: 30em;
+  padding: 2em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: 2px solid white;
-  border-radius: 15px;
-  transition: 0.3s ease-in-out;
+  gap: 1em;
+  border-radius: 2em;
   background-color: grey;
-  box-shadow: 0px 1px 12px 4px;
+}
+
+figure{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+figcaption{
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: white;
 }
 
 .pokemonCardImg{
 
   width: 25em;
   background: white;
-  border-radius: 16px 16px 16px 16px;
-  margin: 1.5rem;
-  box-shadow: 0 0 11px 5px ;
-  transition: 0.3s ease-in-out;
+  border-radius: 2em
 }
 
-
- .pokemonCard:hover{
-  scale: 1.1;
-  box-shadow: 0  0 15px 9px white;
- }
-
- .pokemonCardImg:hover{
-  filter: drop-shadow(0 0 2em white);
-  scale: 0.9;
-  box-shadow: 0  0 15px 9px white;
- }

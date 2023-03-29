@@ -1,20 +1,22 @@
 import React from 'react';
 
+const NavBar = ({poke, pokemonIndex, setIndex}) => {
 
-const NavBar = ({pokemonIndex, setIndex, list}) => {
+  // const handleClickNext = () => {
+  //   setIndex(pokemonIndex + 1)
+  // }
+  // const handleClickPrev = () => {
+  //   setIndex(pokemonIndex - 1)
+  // }
 
-  const handleClickNext = () => {
-    setIndex(pokemonIndex + 1)
-  }
-  const handleClickPrev = () => {
-    setIndex(pokemonIndex - 1)
+  const handleClickButton = () => {
+    setIndex(pokemonIndex)
+    {poke === "pikachu" ? alert("pika pika") : ""}
   }
 
   return (
     <>
-      {pokemonIndex > 0 ? <button onClick={handleClickPrev}>Previous Pokemon</button> : <button>First pokemon</button> }
-      {pokemonIndex < list.length -1 ? <button onClick={handleClickNext}>Next Pokemon</button> : <button>Last Pokemon</button> }
-      {list[pokemonIndex].name === "pikachu" ? alert("pika pikachu !!!") : ""}
+      {<button onClick={handleClickButton}>{poke}</button>}
     </>
   );
 };

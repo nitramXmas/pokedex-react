@@ -7,6 +7,8 @@ import PokemonCard from "./components/PokemonCard";
 export default function App() {
 
   const [pokemonIndex, setIndex] = useState(0);
+
+
   useEffect(
     () => {
       alert("hello pokemon trainer :)")
@@ -16,7 +18,8 @@ export default function App() {
   return (
     <div className="pokemonCard">
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      <NavBar pokemonIndex={pokemonIndex} setIndex={setIndex} list={pokemonList}/>
+      {pokemonList.map((poke, index) => (
+        <NavBar key={poke.name} poke={pokemonList[index].name} pokemonIndex={index} setIndex={setIndex} />))}
     </div>    
   );
 }
